@@ -1,4 +1,8 @@
 <label>Enter Todos</label>
 <input type="text" name="todos" (keyup.enter)="addTodos(totoInput.value)" #totoInput />
 
+<ul>
+<li *ngFor="let todo of todoList$ | async">{{todo.title}}</li>
+</ul>
+
 Ref: https://stackblitz.com/edit/angular-rxjs-store?file=src%2Fapp%2Ftodos.service.ts
